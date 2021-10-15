@@ -1,0 +1,30 @@
+body {
+    background-color: #DFEEEA;
+}
+#nombrePlataforma {
+    background-color: #2F5D62;
+}
+#tituloCurso {
+    color: #000000;
+    background-image: url("imagenes/cursoPhp.png");
+    font-size: 30px;
+}
+
+.tituloInfo {
+    font-family: Verdana, Sans-serif;
+    font-size: 24px;
+}
+
+.tituloInfoM {
+    font-family: Verdana, Sans-serif;
+    font-size: 18px;
+}
+
+.cajaTexto{
+    font-size: 18px;
+    color: #000000;
+    background-color: #5E8B7E;
+    border-radius: 12px;
+    padding: 5px;
+    width: 45%;
+}
