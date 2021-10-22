@@ -1,19 +1,11 @@
 {
-<<<<<<< HEAD
-  "name": "wdemy",
-=======
   "name": "Wdemy2",
->>>>>>> 0af4be196693b3e9177c71a84a18a48b84e80081
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-=======
-    "dev": "nodemon index.js"
->>>>>>> 0af4be196693b3e9177c71a84a18a48b84e80081
   },
   "keywords": [],
   "author": "",

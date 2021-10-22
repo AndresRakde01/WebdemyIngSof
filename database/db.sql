@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 CREATE DATABASE practicadb;
 
 USE practicadb;
-=======
 --Table Tutor
 CREATE TABLE TUTOR (
     id_tutor INTEGER NOT NULL auto_increment,
@@ -87,4 +85,3 @@ CREATE TABLE MODULO (
     PRIMARY KEY(id_modulo, CURSO_id_curso),
     CONSTRAINT MODULO_CURSO_id_fk FOREIGN KEY(CURSO_id_curso) REFERENCES CURSO(id_curso)
 );
->>>>>>> 0af4be196693b3e9177c71a84a18a48b84e80081
