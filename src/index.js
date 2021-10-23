@@ -30,10 +30,8 @@ app.use('/api/holamundo',require('./routes/index'));
 //app.use('/links', require('./routes/links')); //a donde se redirijiran la rutas
 
 
-// Public
-app.use(express.static(path.join(__dirname, 'public'))); //direccion rutas
-
 //Static files
+app.use(express.static(path.join(__dirname, 'public'))); //direccion rutas *
 
 // Starting
 app.listen(app.get('port'), () => {
