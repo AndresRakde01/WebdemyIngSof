@@ -10,11 +10,13 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/curso', async (req,res)=>{
-    const cursosF = await pool.query('SELECT * FROM CURSO order by created_at');
+    const cursosF = await pool.query('SELECT nombre FROM CURSO order by created_at');
     res.send(cursosF);
 });
 
-router.get('/curso:id',async (req,res)=>{
-    const cursoUnico = await pool.query('SELECT * FROM CURSO where id =',{$id});
+router.get('/cursoU',async (req,res)=>{
+    //const idCurso= //parte del frontend obtenerlo
+    const cursoUnico = await pool.query('SELECT * FROM CURSO where id_curso = ?',5113);
+    res.send(cursoUnico);
 });
 module.exports = router;
