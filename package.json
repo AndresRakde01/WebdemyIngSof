@@ -1,25 +1,21 @@
 {
-<<<<<<< HEAD
   "name": "wdemy",
-=======
-  "name": "Wdemy2",
->>>>>>> 0af4be196693b3e9177c71a84a18a48b84e80081
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "nodemon src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
-    "dev": "nodemon index.js"
->>>>>>> 0af4be196693b3e9177c71a84a18a48b84e80081
+    "start": "index.js",
+    "dev": "nodemon index.js",
+    "webpack": "webpack --mode development --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.4",
@@ -30,9 +26,16 @@
     "mysql": "^2.18.1",
     "passport": "^0.5.0",
     "passport-local": "^1.0.0",
-    "timeago.js": "^4.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0",
+    "timeago.js": "^4.0.2",
+    "webpack": "^5.59.1",
+    "webpack-cli": "^4.9.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "nodemon": "^2.0.14"
   }
 }

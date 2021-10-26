@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-CREATE DATABASE practicadb;
 
-USE practicadb;
-=======
---Table Tutor
+use DataBase practicadb;
 CREATE TABLE TUTOR (
     id_tutor INTEGER NOT NULL auto_increment,
     grado_estudios VARCHAR(30) NOT NULL,
@@ -13,7 +9,7 @@ CREATE TABLE TUTOR (
     PRIMARY KEY(id_tutor)
 );
 
---Table Usuario
+
 CREATE TABLE USUARIO (
     id_usuario INTEGER NOT NULL auto_increment,
     TUTOR_id_tutor INTEGER NOT NULL,
@@ -29,13 +25,13 @@ CREATE TABLE USUARIO (
     CONSTRAINT USUARIO_TUTOR_id_fk FOREIGN KEY(TUTOR_id_tutor) REFERENCES TUTOR(id_tutor)
 );
 
---Table COURSE
+
 CREATE TABLE CURSO (
     id_curso INTEGER NOT NULL auto_increment,
     nombre VARCHAR(255) NOT NULL,
     imagen VARCHAR(255) NOT NULL,
     inscritos VARCHAR(255) NOT NULL,
-    descripcion VARCHAR(255) NOT NULL,
+    descripcion Text NOT NULL,
     requisitos VARCHAR(255) NOT NULL,
     duracion INTEGER NOT NULL,
     created_at timestamp NOT NULL DEFAULT current_timestamp,
@@ -43,7 +39,7 @@ CREATE TABLE CURSO (
     PRIMARY KEY(id_curso)
 );
 
---Tabla M:M entre User y Course
+
 CREATE TABLE USUARIO_has_CURSO (
     USUARIO_id_usuario INTEGER NOT NULL,
     CURSO_id_curso INTEGER NOT NULL,
@@ -54,7 +50,7 @@ CREATE TABLE USUARIO_has_CURSO (
     CONSTRAINT USUARIO_has_CURSO_CURSO_id_fk FOREIGN KEY(CURSO_id_curso) REFERENCES CURSO(id_curso)
 );
 
---Tabla Tag
+
 CREATE TABLE ETIQUETA (
     id_etiqueta INTEGER NOT NULL auto_increment,
     nombre VARCHAR(32) NOT NULL,
@@ -63,7 +59,7 @@ CREATE TABLE ETIQUETA (
     PRIMARY KEY(id_etiqueta)
 );
 
---Tabla M:M entre Course y Tag
+
 CREATE TABLE CURSO_has_ETIQUETA (
     CURSO_id_curso INTEGER NOT NULL,
     ETIQUETA_id_etiqueta INTEGER NOT NULL,
@@ -87,4 +83,3 @@ CREATE TABLE MODULO (
     PRIMARY KEY(id_modulo, CURSO_id_curso),
     CONSTRAINT MODULO_CURSO_id_fk FOREIGN KEY(CURSO_id_curso) REFERENCES CURSO(id_curso)
 );
->>>>>>> 0af4be196693b3e9177c71a84a18a48b84e80081
