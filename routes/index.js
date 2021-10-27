@@ -10,8 +10,17 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/curso', async (req,res)=>{
-    const cursosF = await pool.query('SELECT * FROM CURSO order by fechaCreacion');
-    res.send(cursosF);
+    const repetidos= await pool.query('select count(inscritos) from curso group by inscritos having count(inscritos)>1');
+    if(repetidos == 0){
+    const cursosIns=await pool.query('SELECT * From CURSO order by inscritos');
+    res.send(cursosIns);
+    }else{
+        const cursosFech=await pool.query('SELECT * FROM CURSO order by fechaCreacion');
+        res.send(cursosFech);
+    }
+
+    //const cursosF = await pool.query('if((select count(*) from (select inscritos from curso group by having inscritos count(inscritos)>1)==0),SELECT * From CURSO order by inscritos,SELECT * FROM CURSO order by fechaCreacion)');
+    
 });
 
 router.get('/cursoU',async (req,res)=>{
