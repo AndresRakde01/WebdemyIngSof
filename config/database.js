@@ -22,11 +22,11 @@ pool.getConnection((err, connection) => {
     }
 
     if (connection) connection.release();
-        console.log('DB is Connected');
+        console.log('DB is Connectedfgsd');
     return;
 });
 
 //Promisify Pool a Querys
-pool.query = promisify(pool.query);
+pool.query = promisify(pool.query); //solo usas pool para promesas query
 
 module.exports = pool;

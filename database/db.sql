@@ -31,7 +31,7 @@ CREATE TABLE CURSO (
     nombre VARCHAR(255) NOT NULL,
     imagen VARCHAR(255) NOT NULL,
     inscritos VARCHAR(255) NOT NULL,
-    descripcion VARCHAR(255) NOT NULL,
+    descripcion Text NOT NULL,
     requisitos VARCHAR(255) NOT NULL,
     duracion INTEGER NOT NULL,
     created_at timestamp NOT NULL DEFAULT current_timestamp,
